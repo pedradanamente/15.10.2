@@ -1,0 +1,51 @@
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+
+		RewriteRule ^/?$ index.php [NC,L]
+		RewriteRule ^inicio/?$ index.php [NC,L]
+		RewriteRule ^login/?$ login.php [NC,L]
+
+		RewriteRule ^novo/?$ index.php?p=novo [NC,L]
+		RewriteRule ^entrada/?$ index.php?p=entrada [NC,L]
+		RewriteRule ^recebido/?$ index.php?p=recebido [NC,L]
+		RewriteRule ^encaminhado/?$ index.php?p=encaminhado [NC,L]
+		RewriteRule ^retornou/?$ index.php?p=retornou [NC,L]
+		RewriteRule ^concluido/?$ index.php?p=concluido [NC,L]
+
+		RewriteRule ^novo_rma/?$ index.php?p=novo_rma [NC,L]
+		RewriteRule ^novo_representante/?$ index.php?p=novo_representante [NC,L]
+		RewriteRule ^novo_fornecedor/?$ index.php?p=novo_fornecedor [NC,L]
+		RewriteRule ^novo_fabricante/?$ index.php?p=novo_fabricante [NC,L]
+		RewriteRule ^novo_cliente/?$ index.php?p=novo_cliente [NC,L]
+
+		RewriteRule ^pesquisar/?$ index.php?p=pesquisar [NC,L]
+		RewriteRule ^pesquisar/([a-z0-9-]+)/?$ index.php?p=pesquisar&seek=$1 [NC]
+		RewriteRule ^anotacoes/?$ index.php?p=anotacoes [NC,L]
+		RewriteRule ^representantes/?$ index.php?p=representantes [NC,L]
+		RewriteRule ^fornecedores/?$ index.php?p=fornecedores [NC,L]
+		RewriteRule ^fabricantes/?$ index.php?p=fabricantes [NC,L]
+		RewriteRule ^clientes/?$ index.php?p=clientes [NC,L]
+		RewriteRule ^relatorios/?$ index.php?p=relatorios [NC,L]
+		RewriteRule ^controle/?$ index.php?p=controle [NC,L]
+		RewriteRule ^estatisticas/?$ index.php?p=estatisticas [NC,L]
+		RewriteRule ^logout/?$ index.php?p=logout [NC,L]
+
+		RewriteRule ^creditos?$ index.php?p=creditos [NC,L]
+		RewriteRule ^creditos/disponiveis?$ index.php?p=creditos&subp=disponiveis [NC,L]
+		RewriteRule ^creditos/pendentes?$ index.php?p=creditos&subp=pendentes [NC,L]
+		RewriteRule ^creditos/usados?$ index.php?p=creditos&subp=usados [NC,L]
+
+		RewriteRule ^page/?$ page/403.php [NC,L]
+		RewriteRule ^images/?$ page/403.php [NC,L]
+		RewriteRule ^css/?$ page/403.php [NC,L]
+		RewriteRule ^js/?$ page/403.php [NC,L]
+		RewriteRule ^bootstrap/?$ page/403.php [NC,L]
+		RewriteRule ^mobile/?$ page/403.php [NC,L]
+		RewriteRule ^pp/?$ page/403.php [NC,L]
+
+		RewriteRule ^avisar/([0-9]+)/?$ index.php?p=avisar_alguem&chave=$1 [NC]
+		RewriteRule ^enviar_email_ao_destinatario/([0-9]+)/?$ index.php?p=enviar_email&chave=$1 [NC]
+		RewriteRule ^marcarcomo/([a-z0-9-]+)/([0-9]+)/?$ index.php?p=gets&st=$1&chave=$2
+
+
+	</IfModule>
